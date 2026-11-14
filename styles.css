@@ -193,7 +193,28 @@ body {
     overflow: hidden;
 }
 
+.visual-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ASCII glow layer, drawn by initGlow() in script.js. Sits behind the schematic. */
+.glow-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.aperture-card:hover .glow-canvas {
+    transform: scale(1.04);
+}
+
 .schematic-svg {
+    position: relative;
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
